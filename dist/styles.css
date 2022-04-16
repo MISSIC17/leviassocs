@@ -1,0 +1,174 @@
+:root {
+  --primary-bg: #0a1429;
+  --primary-red: #de1f1f;
+  --primary-yellow: #ffd600;
+  --primary-navy: #17acdb;
+  --primary-green: #63ad29;
+  --primary-purple: #4950ba;
+  --primary-grey: #424a5a;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px rgb(0, 195, 255);  */
+  background: rgb(0, 0, 0);
+  width: 1em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  height: 2em;
+  border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b9a6a6;
+}
+* {
+  /* outline:1px solid white; */
+}
+body {
+  display: grid;
+  grid-template-rows: 10vh auto 5vh;
+}
+nav {
+  font-family: "Varela Round", sans-serif;
+}
+nav > h1::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 0.1em;
+  background: var(--primary-yellow);
+  bottom: -0.1em;
+  left: 0;
+  transform: translateX(-5%);
+}
+main > section#intro {
+  font-family: "Oswald", sans-serif;
+}
+@media (min-width: 1400px) {
+  main > section#intro::after {
+    content: "";
+    position: absolute;
+    height: 50vh;
+    width: 0.2em;
+    background: white;
+    right: -25%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+main > section#buttons {
+  font-family: "Oswald", sans-serif;
+}
+form > input {
+  height: 3em;
+  width: min(20em, 90vh);
+  color: black;
+  padding: 1em;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  outline: none;
+  -webkit-appearance: none;
+  transition: 0.2s all ease;
+}
+input[type="submit"]:hover {
+  filter: contrast(1.2);
+}
+input[type="submit"]:focus {
+  animation: buttonPress 0.4s linear;
+}
+.close-btn-forms {
+  content: "";
+  position: absolute;
+  background: white;
+  display: grid;
+  place-items: center;
+  color: black;
+  top: 0;
+  right: 0;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+.popup-animation {
+  transform-origin: center;
+  animation: popupForms 0.1s ease-in;
+}
+.close-btn-forms > i {
+  font-size: 2em;
+}
+@keyframes popupForms {
+  from {
+    transform: scaleY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes buttonPress {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.dark {
+  opacity: 0.4;
+}
+.green {
+  border: 3px solid lightgreen !important;
+}
+.red {
+  border: 3px solid red !important;
+}
+.black {
+  border: 3px solid black;
+}
+
+#admin-operations-wrapper::after {
+  content: "";
+  background: rgb(204, 202, 202);
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  bottom: -1em;
+}
+li {
+  list-style: none;
+}
+tr,
+td,
+th {
+  border: 2px solid var(--primary-bg);
+  padding:0 0.4em;;
+}
+table{
+  background:#202A32;
+}
+tr:first-child {
+  height: 4em;
+  background: var(--primary-grey);
+  font-family: "Oswald", sans-serif;
+  font-size:1.3em;
+}
+tr:nth-child(2n+1){
+  background:#2C3746;
+}
+th{
+  padding:0 1em;
+}
+/* font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Varela Round', sans-serif; */
