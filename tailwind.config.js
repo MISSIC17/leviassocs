@@ -11,6 +11,13 @@ module.exports = {
       'white': '#FFFFFF',
       'primary-gray':'#424A5A'
     },
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui' ],
+      'oswald': ['Oswald', 'sans-serif'],
+      'roboto': ['Roboto', 'sans-serif'],
+      'varela':['Varela Round','sans-serif'],
+
+    },
     extend: {},
   },
   plugins: [],
