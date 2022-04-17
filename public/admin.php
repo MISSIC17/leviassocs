@@ -20,7 +20,7 @@
         </div>
     </nav>
 
-    <main class="grid w-3/4 grid-rows-[4em_auto_auto] min-h-[50vh] gap-10 justify-items-center  self-start mt-10">
+    <main class="grid w-3/4 grid-rows-[4em_2rem_3rem_auto_auto] min-h-[50vh] gap-10 justify-items-center  self-start mt-10">
         <div id="admin-operations-wrapper" class="relative text-white w-fit flex justify-around ">
             <button type="button" class="admin-btn-primary">
                 <p class="text-xl">Create Record</p>
@@ -34,6 +34,20 @@
             <button type="button" class="admin-btn-active">
                 <p class="text-xl">Search Record</p>
             </button>
+        </div>
+       <header id="admin" class="relative text-white font-oswald text-4xl" >Search Record</header> 
+        <div id="search-wrapper" >
+            <label for="search_type" class="font-oswald text-white">Search by:</label>
+            <select name="search_type" id="search_type">
+                <option value="id">Id</option>
+                <option value="name">Name</option>
+                <option value="class">Class</option>
+                <option value="section">Section</option>
+                <option value="shift">Shift</option>
+                <option value="phone">Phone</option>
+            </select>
+            <label for="search_keyword" class="font-oswald text-white">Search Keyword</label>
+            <input type="text" name="search_keyword" id="search_keyword">
         </div>
         <div id="records" class="text-white">
             <table id="table" class="">
