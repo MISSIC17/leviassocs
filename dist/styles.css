@@ -67,6 +67,16 @@ main > section#intro {
 main > section#buttons {
   font-family: "Oswald", sans-serif;
 }
+header#admin::after{
+  content:'';
+  position: absolute;
+  background:var(--primary-red);
+  height:0.2em;
+  width:100%;
+  bottom:-8px;
+  left:0;
+  z-index: -1;
+}
 form > input {
   height: 3em;
   width: min(20em, 90vh);
@@ -151,8 +161,8 @@ li {
 tr,
 td,
 th {
-  border: 2px solid var(--primary-bg);
-  padding:0 0.4em;;
+  border: 4px solid var(--primary-bg);
+  padding:0.4em 0.4em;
 }
 table{
   background:#202A32;
@@ -168,6 +178,8 @@ tr:nth-child(2n+1){
 }
 th{
   padding:0 1em;
+  color:var(--primary-red);
+  background:#424A5A;
 }
 /* font-family: 'Oswald', sans-serif;
 font-family: 'Roboto', sans-serif;
