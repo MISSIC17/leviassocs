@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui;
   /* 4 */
 }
 
@@ -513,6 +513,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .small-btn{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
   border-radius: 500px;
   --tw-bg-opacity: 1;
   background-color: rgb(222 31 31 / var(--tw-bg-opacity));
@@ -547,12 +549,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 2 / span 2;
 }
 
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mt-10{
   margin-top: 2.5rem;
 }
 
 .ml-5{
   margin-left: 1.25rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .flex{
@@ -587,12 +598,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1em;
 }
 
+.h-\[3em\]{
+  height: 3em;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
 
 .min-h-\[50vh\]{
   min-height: 50vh;
+}
+
+.min-h-fit{
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .w-full{
@@ -609,6 +630,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: fit-content;
 }
 
+.w-1\/2{
+  width: 50%;
+}
+
+.min-w-fit{
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -621,16 +652,56 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: none;
 }
 
-.grid-rows-\[4em_auto_auto\]{
-  grid-template-rows: 4em auto auto;
+.grid-cols-\[90\%_10\%\]{
+  grid-template-columns: 90% 10%;
+}
+
+.grid-rows-\[4em_2rem_3rem_auto_auto\]{
+  grid-template-rows: 4em 2rem 3rem auto auto;
+}
+
+.grid-rows-\[4em_2rem_auto\]{
+  grid-template-rows: 4em 2rem auto;
+}
+
+.grid-rows-\[4em_2rem_o\]{
+  grid-template-rows: 4em 2rem o;
+}
+
+.grid-rows-\[4em_2rem_\]{
+  grid-template-rows: 4em 2rem;
+}
+
+.grid-rows-\[\]{
+  grid-template-rows: ;
+}
+
+.grid-rows-\[4em_2rem_20\]{
+  grid-template-rows: 4em 2rem 20;
+}
+
+.grid-rows-\[4em_2rem_20rem\]{
+  grid-template-rows: 4em 2rem 20rem;
+}
+
+.grid-rows-\[4em_2rem_30rem\]{
+  grid-template-rows: 4em 2rem 30rem;
 }
 
 .flex-row{
   flex-direction: row;
 }
 
+.flex-col{
+  flex-direction: column;
+}
+
 .place-items-center{
   place-items: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .justify-center{
@@ -653,6 +724,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.25rem;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
@@ -665,8 +740,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-self: flex-start;
 }
 
+.self-center{
+  align-self: center;
+}
+
 .justify-self-start{
   justify-self: start;
+}
+
+.justify-self-center{
+  justify-self: center;
 }
 
 .rounded-\[500px\]{
@@ -683,6 +766,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-4{
   border-width: 4px;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-primary-red{
+  --tw-border-opacity: 1;
+  border-color: rgb(222 31 31 / var(--tw-border-opacity));
 }
 
 .border-white{
@@ -708,6 +804,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-primary-green{
   --tw-bg-opacity: 1;
   background-color: rgb(99 173 41 / var(--tw-bg-opacity));
+}
+
+.bg-primary-red{
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 31 31 / var(--tw-bg-opacity));
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-5{
@@ -740,12 +850,48 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.px-32{
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.pl-3{
+  padding-left: 0.75rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
 .text-left{
   text-align: left;
 }
 
 .text-center{
   text-align: center;
+}
+
+.align-middle{
+  vertical-align: middle;
+}
+
+.font-oswald{
+  font-family: Oswald, sans-serif;
 }
 
 .text-2xl{

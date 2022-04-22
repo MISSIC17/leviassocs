@@ -13,7 +13,19 @@
         if ($result->num_rows > 0) {
             header("Location: http://localhost/leviassocs/public/admin.php");
             exit();
-        } else {
-        };
+        } 
+    };
+    if (isset($_POST['student_submit'])) {
+        $id = $_REQUEST['student_id'];
+        $email = $_REQUEST['student_email'];
+        $password = $_REQUEST['student_password'];
+        $sql = "SELECT * FROM students WHERE id=" . $id . " AND password='" . $password . "';";
+        echo $sql;
+        $result = $conn->query($sql);
+        echo $id,$password;
+        if ($result->num_rows > 0) {
+            header("Location: http://localhost/leviassocs/public/student.php"); 
+            exit();
+        } 
     }
     ?>

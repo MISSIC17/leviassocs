@@ -77,7 +77,7 @@ header#admin::after{
   left:0;
   z-index: -1;
 }
-form > input {
+form > input,form>*>input {
   height: 3em;
   width: min(20em, 90vh);
   color: black;
@@ -88,11 +88,21 @@ form > input {
   -webkit-appearance: none;
   transition: 0.2s all ease;
 }
+input{
+  outline: none;
+}
+
 input[type="submit"]:hover {
   filter: contrast(1.2);
 }
 input[type="submit"]:focus {
   animation: buttonPress 0.4s linear;
+}
+input[type="password"]::after{
+  content:'f06e';
+  height:2em;
+  width:3em;
+
 }
 .close-btn-forms {
   content: "";
@@ -167,7 +177,7 @@ th {
 table{
   background:#202A32;
 }
-tr:first-child {
+thead>tr:first-child {
   height: 4em;
   background: var(--primary-grey);
   font-family: "Oswald", sans-serif;
@@ -181,6 +191,29 @@ th{
   color:var(--primary-red);
   background:#424A5A;
 }
-/* font-family: 'Oswald', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Varela Round', sans-serif; */
+td{
+  white-space: nowrap;
+}
+select,select:focus,select:focus-within{
+  outline: none;
+}
+#courses-wrapper{
+  position: relative;
+  min-width:50%;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center;
+  gap:2em;
+}
+#courses-wrapper>div{
+  height:20em;
+
+  aspect-ratio: 3/4;
+  background-color: var(--primary-grey);
+  display: grid;
+  color:white;
+  justify-content: center;
+  border:2px dotted var(--primary-red);
+  place-items: center;
+  text-decoration: underline;
+}
