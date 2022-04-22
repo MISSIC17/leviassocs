@@ -1,3 +1,3 @@
 # Leviassocs
 > a PHP powered CRUD operation handler with admin perms
-## ⚠⚠Scroll slowly, construction ahead⚠⚠
+## a mere-backbone has been built till now, hoping to continue after I get some time, but f*** php :)
