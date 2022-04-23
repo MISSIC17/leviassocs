@@ -3,20 +3,6 @@
 include 'components/functions.php';
 ?>
 <html>
-<style>
-    label {
-        color: white;
-    }
-
-    form>div {
-        display: grid;
-        grid-template-rows: 1.5em 3em;
-    }
-
-    select {
-        width: 15em;
-    }
-</style>
 <?php
 include 'components/head.php';
 ?>

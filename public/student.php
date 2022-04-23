@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <?php include"components/head.php";?>
-
 <body class="grid place-items-center min-h-screen bg-primary-dark">
     <nav class="grid place-items-center w-full h-16 md:h-20">
         <h1 class="relative md:text-3xl text-primary-red text-2xl">
@@ -26,12 +25,13 @@
             </button>
         </div>
         <header id="admin" class="relative text-white font-oswald text-4xl"> Course Details</header>
-        <div id="courses-wrapper""> 
-            <div id="subject1">Phyiscs</div>
-            <div id="subject2">Chemistry</div>
-            <div id="subject3">Mathematics</div>
-            <div id="subject4">Computer</div>
-            <div id="subject5">Nepali</div>
+        <div id="courses-wrapper"> 
+            <div id="subject1" ><p class="text-4xl ">Phyiscs</p></div>
+            <div id="subject2" ><p class="text-4xl ">Chemistry</p></div>
+            <div id="subject3" ><p class="text-4xl ">Mathematics</p></div>
+            <div id="subject4" ><p class="text-4xl ">Computer</p></div>
+            <div id="subject5" ><p class="text-4xl ">Nepali</p></div>
+            <div id="subject5" ><p class="text-4xl ">English</p></div>
         </div>
     </main>
     <?php include 'components/footer.php'; ?>
